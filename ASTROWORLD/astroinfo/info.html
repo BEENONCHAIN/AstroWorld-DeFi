@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class = "bg-black text-white">
+<head class = "bg-black text-white">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+<meta name="viewport"content="height=device-height, initial-scale=1, shrink-tofit=no">
+<link rel="stylesheet" href="/css/astroworld.css">
+<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+<style>
+.bg-black {
+  background-color: #000000 !important;
+}
+
+a.bg-black:hover, a.bg-black:focus,
+button.bg-black:hover,
+button.bg-black:focus {
+  background-color: black !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+
+.masthead {
+  position: relative;
+  width: 110%;
+  height: ;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../astroimg/AstroworldUpdated.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+@media only screen and (max-width : 900px) {
+
+div {
+  position: relative;
+   margin: 0 auto;
+  top: 10%;
+  right: 0px;
+  width: 400px;
+  height: 500px;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding:10px;
+}
+.masthead {
+  position: relative;
+  width: 110%;
+  height: ;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../astroimg/AstroworldUpdated.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+canvas {
+  
+  position:absolute;
+  top: 17%;
+  left: 0px;
+  width: 380px;
+  height: 1000px;
+  
+  padding:10px;
+}
+
+a {
+    left: 90px;
+    top: 0px;
+    position: relative;
+}
+
+}
+
+
+@media only screen and (min-width : 901px) {
+div {
+  position: relative;
+   margin: 0 auto;
+  top: 10%;
+  right: 400px;
+  width: 600px;
+  height: 600px;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding:10px;
+}
+
+.masthead {
+  position: relative;
+  width: 100%;
+  height: ;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../astroimg/AstroworldUpdated.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+canvas {
+  position: relative;
+   margin: 0 auto;
+  top: 10%;
+  right: 0px;
+  width: 580px;
+  height: 700px;
+
+  padding:10px;
+}
+
+a {
+    left: 800px;
+    top: 0px;
+    position: relative;
+}
+
+}
+
+
+
+body {
+    font-family: 'Press Start 2P';font-size: 10px;
+}
+
+
+table {
+  font-family: 'Press Start 2P';font-size: 10px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  position: relative;
+  text-align: left;
+  left: 10px;
+  padding: 8px;
+}
+
+
+</style>
+ 
+  <a class="">
+   AstroWorld Tokenomics  
+    
+  </a>
+
+
+ 
+
+
+</head>
+<body class = "text-white bg-black" >
+
+
+
+<h1 class = " masthead bg-black text-white"></h1>
+
+<div class = "bg-black text-white" ><table>
+  <tr>
+    <th>Buy Price</th>
+    <th>Reserve</th>
+    <th>Issuance</th>
+    <th>Total Supply</th>
+  </tr>
+  <tr>
+    <td>0 Dai</td>
+    <td>0 ASTRO</td>
+    <td>0 ASTRO</td>
+    <td>0 ASTRO</td>
+  </tr>
+  
+</table> 
+  <canvas class = "bg-black text-white" id="myChart" height = "400" ></canvas>
+  
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  // === include 'setup' then 'config' above ===
+  const labels = [
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: '',
+      backgroundColor: 'rgb(61,111,67)',
+      borderColor: '',
+       borderWidth: 5,
+       fill: {
+                target: 'origin',
+                below: 'rgb(144,238,144)'    // And blue below the origin
+              },
+      hoverBackgroundColor: "rgb(144,238,144)",
+      data: [1 ,5, 10, 15, 20, 25, 30],
+    }]
+  };
+var ctx = document.getElementById("myChart").getContext("2d");
+var gradient = ctx.createLinearGradient(0, 0, 0, 400);
+const config = {
+    type: 'line',
+    data: data,
+    options: {
+    scales: {
+      yAxes: [{
+        ticks:{
+          min : 0,
+          stepSize : 1,
+          fontColor : "#000",
+          fontSize : 14
+        },
+        gridLines:{
+          color: "#000",
+          lineWidth:2,
+          zeroLineColor :"#000",
+          zeroLineWidth : 2
+        },
+        stacked: true
+      }],
+      xAxes: [{
+        ticks:{
+          fontColor : "#000",
+          fontSize : 14
+        },
+        gridLines:{
+          color: "#fff",
+          lineWidth:2
+        }
+      }]
+    },
+    responsive:false
+  }
+  };
+
+  
+
+ var myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+  
+</script>
+
+
+<script type="module">
+           import { web3 } from "https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js";
+      </script>
+        <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@uniswap/v2-core"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@uniswap/sdk@3.0.3/dist/index.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider@1.2.0/dist/index.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script type="text/javascript" src="info.js"></script>
+<script type="text/javascript" src="js-main/utils.js"></script>
+<script type="text/javascript" src="js-main/metaAcct.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
