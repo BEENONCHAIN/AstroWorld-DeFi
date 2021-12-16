@@ -22,7 +22,7 @@
         method: 'eth_sendTransaction',
         params: [{  
                    from: accounts[0],
-                   to: passxaddy[numcxhain[chainIDs]], 
+                   to: passxxaddy[numxchain[chainIDs]], 
                    tag: 'latest', 
                    chainid: chainIDs,
                    data: '0x3b80fb19' }]
